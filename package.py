@@ -246,7 +246,7 @@ def clone_llvm_repository(repo, branch, llvm_repo_destination, dry_run):
     Downloads a single commit from the given repository.
     """
     # Temporary hack.
-    if llvm_repo_destination.exists():
+    if os.path.exists(llvm_repo_destination):
         return absolute_path(llvm_repo_destination)
     if host_is_darwin():
         default_repo, default_branch = "https://github.com/apple/llvm-project", "apple/stable/20200714"
