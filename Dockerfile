@@ -20,6 +20,7 @@ RUN useradd -r -u 1000 --create-home -g $USERNAME $USERNAME
 USER $USERNAME
 WORKDIR /home/$USERNAME
 
-COPY package.py .
-
-ENTRYPOINT ["python3.6", "package.py"]
+COPY utils.py .
+COPY checkout.py .
+COPY build.py .
+COPY archive.py .
