@@ -19,8 +19,3 @@ RUN groupadd -g 1000 $USERNAME
 RUN useradd -r -u 1000 --create-home -g $USERNAME $USERNAME
 USER $USERNAME
 WORKDIR /home/$USERNAME
-
-COPY utils.py .
-COPY checkout.py .
-COPY build.py .
-COPY archive.py .

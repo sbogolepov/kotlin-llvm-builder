@@ -1,0 +1,16 @@
+{
+  "target_backends": [
+    "Native"
+  ],
+  "distribution_components": null,
+  "build_targets": [
+    "install"
+  ],
+  "projects": ["clang"],
+  "runtimes": null,
+  "build_type": "Debug",
+  "cmake_flags": [
+    "-DCOMPILER_RT_BUILD_CRT=OFF"
+  ],
+  "use_default_cmake_flags": true
+}
