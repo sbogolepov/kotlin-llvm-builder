@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+#
+# Copyright 2010-2022 JetBrains s.r.o. Use of this source code is governed by the Apache 2.0 license
+
 import argparse
 import json
 import utils
@@ -72,11 +76,15 @@ def platform_common_flags():
         return []
 
 
+def default_projects():
+    return ["clang", "lld", "libcxx", "libcxxabi", "compiler-rt"]
+
+
 bootstrap_build_config = {
     "target_backends": ["Native"],
     "distribution_components": None,
     "build_targets": ["install"],
-    "projects": None,
+    "projects": default_projects(),
     "runtimes": None,
     "build_type": "Release",
     "cmake_flags": bootstrap_flags(),
@@ -87,7 +95,7 @@ dev_build_config = {
     "target_backends": None,
     "distribution_components": None,
     "build_targets": ["install-distribution"],
-    "projects": None,
+    "projects": default_projects(),
     "runtimes": None,
     "build_type": "Release",
     "cmake_flags": dist_flags(),
@@ -98,7 +106,7 @@ user_build_config = {
     "target_backends": None,
     "distribution_components": user_dist_components(),
     "build_targets": ["install-distribution"],
-    "projects": None,
+    "projects": default_projects(),
     "runtimes": None,
     "build_type": "Release",
     "cmake_flags": dist_flags(),
