@@ -94,7 +94,7 @@ bootstrap_build_config = {
 dev_build_config = {
     "target_backends": None,
     "distribution_components": None,
-    "build_targets": ["install-distribution"],
+    "build_targets": ["install"],
     "projects": default_projects(),
     "runtimes": None,
     "build_type": "Release",
