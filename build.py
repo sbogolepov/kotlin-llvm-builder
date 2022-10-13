@@ -14,7 +14,7 @@ from typing import List
 def user_dist_components():
     components = ["clang", "libclang", "lld", "llvm-cov", "llvm-profdata", "llvm-ar", "clang-resource-headers"]
     if utils.host_is_linux():
-        components.append("compiler_rt")
+        components.append("compiler-rt")
     return components
 
 
